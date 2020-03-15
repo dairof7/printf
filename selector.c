@@ -1,6 +1,6 @@
 #include "holberton.h"
-#include <stdio.h>
-int select(const char *format, va_list list, op_ options[])
+
+int select_(const char *format, va_list list, op_ options[])
 
 {
 	int i = 0, j = 0, nchar = 0;

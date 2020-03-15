@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <string.h>
+
 int _printf(const char *format, ...)
 {
 	int nchar = 0;
@@ -8,10 +8,12 @@ int _printf(const char *format, ...)
 	op_ options[] = {
 	{"c", f_char},
 	{"s", f_string},
+	{"b", f_bin},
+	{"i", f_int},
 	{NULL, NULL}
 	};
 
-	nchar = select(format, list, options);
+	nchar = select_(format, list, options);
 	va_end(list);
 	return(nchar);
 }

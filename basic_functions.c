@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "holberton.h"
 
 /**
  * _putchar - writes the character c to stdout
@@ -48,4 +48,40 @@ int _strlen(char *s)
 	}
 
 	return (i);
+}
+
+int len_num(unsigned int n, unsigned int base )
+{
+		unsigned int i;
+
+	while (n > 0)
+	{
+		n = n / base;
+		i++;
+	}
+	return (i);
+}
+
+char *rev_string(char *s)
+{
+int i = 0, j, l;
+char b;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	i--;
+
+	if (i % 2 == 0)
+		l = i / 2;
+	else
+		l = (i / 2) + 1;
+	for (j = 0; j < l; j++)
+	{
+		b = s[i - j];
+		s[i - j] = s[j];
+		s[j] = b;
+	}
+	return (s);
 }
