@@ -1,9 +1,14 @@
 #include "holberton.h"
-
+/**
+ * _printf -  select the type of function.
+ * @format: first argumento of printf, s a character string
+ * Return: return the number of printer chars
+ */
 int _printf(const char *format, ...)
 {
 	int nchar = 0;
 	va_list list;
+
 	va_start(list, format);
 	op_ options[] = {
 	{"c", f_char},
@@ -16,6 +21,5 @@ int _printf(const char *format, ...)
 
 	nchar = select_(format, list, options);
 	va_end(list);
-	return(nchar);
+	return (nchar);
 }
-

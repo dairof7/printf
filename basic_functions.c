@@ -16,19 +16,19 @@ int _putchar(char c)
 /**
  * _puts - function that prints a string
  * @str: char array pointer
- *
+ * Return: number of printed chars
  */
 
 int _puts(char *str)
 {
-	int i=0;
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
 		i++;
 	}
-	return(i-1);
+	return (i - 1);
 }
 
 /**
@@ -49,20 +49,27 @@ int _strlen(char *s)
 
 	return (i);
 }
-
-int len_num(unsigned int n, unsigned int base )
+/**
+ * len_num - len of a string
+ * @n: number
+ * @base: base of the number
+ * Return: len of the number
+ */
+int len_num(unsigned int n, unsigned int base)
 {
-		unsigned int i=0;
+		unsigned int i = 0;
 
 	while (n > 0)
 	{
 		n = n / base;
 		i++;
-		
 	}
 	return (i);
 }
-
+/**
+ * rev_string - reverste to a string.
+ * @str: string parameter
+ */
 void rev_string(char *str)
 {
 int i = 0, j, l;
@@ -84,10 +91,8 @@ char b;
 		str[i - j] = str[j];
 		str[j] = b;
 	}
-	i=0;
-	
+	i = 0;
+
 	while (str[i] != '\0')
 		i++;
-	
-
 }

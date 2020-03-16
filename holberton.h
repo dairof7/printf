@@ -5,7 +5,12 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * struct op_func - data struct
+ * @op: char option
+ * @f: function pointer
+ * Description: contain char pointer and function pointer
+ */
 typedef struct op_func
 {
 	char *op;
