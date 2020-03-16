@@ -21,8 +21,7 @@ int f_int(va_list list)
 	{
 		_putchar('-');
 		tam = 1;
-		num_p = number * -1;
-		copia = copia * -1;
+		num_p = number * -1, copia = copia * -1;
 	}
 	else
 	{
@@ -46,6 +45,7 @@ int f_int(va_list list)
 	}
 	contador = contador + tam;
 	contador++;
+	free(caracter);
 	return (contador);
 }
 
