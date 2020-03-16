@@ -15,7 +15,7 @@ int select_(const char *format, va_list list, op_ options[])
 	{
 		if (format[i] == '%' && format[i + 1] == '\0')
 			return (-1);
-		if (format[i] == '%' && (format[i + 1] == ' ' || format[i + 1] != '%'))
+		if (format[i] == '%' && (format[i + 1] == ' '))
 		{
 			if (format[i + 1] == ' ' && format[i + 2] != ' ')
 			{
