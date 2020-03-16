@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		{"%", f_perc},
 		{"b", f_bin},
 		{"i", f_int},
+		{"d", f_int},
 		{NULL, NULL}
 		};
 
