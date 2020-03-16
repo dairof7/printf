@@ -7,12 +7,12 @@
 #include <stdlib.h>
 int f_int(va_list list)
 {
-	int num_p;
+	unsigned int num_p;
 	int i;
 	int number;
 	int contador = 0;
 	int tam = 0;
-	int copia;
+	unsigned int copia;
 	char *caracter;
 
 	number = va_arg(list, int);
@@ -45,7 +45,6 @@ int f_int(va_list list)
 		_putchar(caracter[i] + '0');
 	}
 	contador = contador + tam;
-	contador--;
 	return (contador);
 }
 
