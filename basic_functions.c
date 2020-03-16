@@ -28,6 +28,8 @@ int _puts(char *str)
 		_putchar(str[i]);
 		i++;
 	}
+	if (i == 0)
+		return (i);
 	return (i - 1);
 }
 
