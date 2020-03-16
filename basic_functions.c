@@ -52,22 +52,23 @@ int _strlen(char *s)
 
 int len_num(unsigned int n, unsigned int base )
 {
-		unsigned int i;
+		unsigned int i=0;
 
 	while (n > 0)
 	{
 		n = n / base;
 		i++;
+		
 	}
 	return (i);
 }
 
-char *rev_string(char *s)
+void rev_string(char *str)
 {
 int i = 0, j, l;
 char b;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
@@ -79,9 +80,14 @@ char b;
 		l = (i / 2) + 1;
 	for (j = 0; j < l; j++)
 	{
-		b = s[i - j];
-		s[i - j] = s[j];
-		s[j] = b;
+		b = str[i - j];
+		str[i - j] = str[j];
+		str[j] = b;
 	}
-	return (s);
+	i=0;
+	
+	while (str[i] != '\0')
+		i++;
+	
+
 }

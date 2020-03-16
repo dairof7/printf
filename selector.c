@@ -26,8 +26,10 @@ int select_(const char *format, va_list list, op_ options[])
 				}
 			}
 			else
-		_putchar(format[i]);
-		nchar++;
+			{
+			_putchar(format[i]);
+			nchar++;
+			}
 	}		
 	return(nchar);
 }

@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 	op_ options[] = {
 	{"c", f_char},
 	{"s", f_string},
+	{"%", f_perc},
 	{"b", f_bin},
 	{"i", f_int},
 	{NULL, NULL}

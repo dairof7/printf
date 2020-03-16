@@ -19,6 +19,8 @@ int f_char(va_list);
 int select_(const char *format, va_list list, op_ options[]);
 int _strlen(char *s);
 int len_num(unsigned int n, unsigned int base);
-char *rev_string(char *s);
+void rev_string(char *s);
 int f_bin(va_list list);
+int f_int(va_list list);
+int f_perc(va_list list);
 #endif
