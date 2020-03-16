@@ -45,6 +45,7 @@ int f_int(va_list list)
 		_putchar(caracter[i] + '0');
 	}
 	contador = contador + tam;
+	contador++;
 	return (contador);
 }
 
