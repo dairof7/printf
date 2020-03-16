@@ -41,9 +41,11 @@ int f_int(va_list list)
 		copia = copia / 10;
 	}
 	for (i = 0; i <= contador; i++)
+	{
 		_putchar(caracter[i] + '0');
-		contador = contador + tam;
-		contador--;
+	}
+	contador = contador + tam;
+	contador--;
 	return (contador);
 }
 
