@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"b", f_bin},
 		{"i", f_int},
 		{"d", f_int},
+		{"u", f_int_unsigned},
 		{NULL, NULL}
 		};
 
