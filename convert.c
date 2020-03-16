@@ -31,5 +31,6 @@ int f_bin(va_list list)
 	for (i = 0 ; i < len; i++)
 		_putchar(str[i]);
 	free(str);
+	
 	return (i);
 }
