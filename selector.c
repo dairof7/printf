@@ -13,25 +13,37 @@ int select_(const char *format, va_list list, op_ options[])
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == '\0')
+			return (-1);
+		if (format[i] == '%' && (format[i + 1] == ' ' || format[i + 1] != '%'))
 		{
+			if (format[i + 1] == ' ' && format[i + 2] != ' ')
+			{
+				_putchar(' ');
+				nchar++;
+				i++;
+			}
 			j = 0;
 			while (options[j].op)
 			{
 				if (format[i + 1] == options[j].op[0])
 				{
 					nchar += options[j].f(list);
+					if (nchar == -1)
+						return (-1);
 					i++;
 					break;
-					}
-				j++;
 				}
+				if ((format[i + 1] == ' ') && (j == 7))
+					return (-1);
+				j++;
 			}
-			else
-			{
-				_putchar(format[i]);
-				nchar++;
-			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			nchar++;
+		}
 	}
 	return (nchar);
 }
