@@ -123,3 +123,49 @@ int f_hex(va_list list)
 	free(str);
 	return (len);
 }
+/**
+ * f_heX - function to convert decimal to hexadecimal, uppercase
+ * @list: list type
+ * Return: int
+ */
+int f_heX(va_list list)
+{
+	int n, mod = 0, copia, len, i = 0;
+	char *str;
+
+	n = va_arg(list, int);
+	copia = n;
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+	{
+		_putchar('0');
+		len = 1;
+	}
+	else
+	{
+		len = len_num(copia, 16);
+		str = malloc(sizeof(char) * len);
+		if (str == NULL)
+			return (-1);
+		while (n > 0)
+		{
+			mod = n % 16;
+			n = n / 16;
+			if (mod >= 10)
+			{
+				str[i] = mod + 55;
+				i++;
+			}
+			else
+			{
+				str[i] = mod + '0';
+				i++;
+			}
+		}
+	}
+	for (i = len - 1 ; i >= 0; i--)
+		_putchar(str[i]);
+	free(str);
+	return (len);
+}

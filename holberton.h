@@ -28,6 +28,7 @@ void rev_string(char *s);
 int f_bin(va_list list);
 int f_oct(va_list list);
 int f_hex(va_list list);
+int f_heX(va_list list);
 int f_int(va_list list);
 int f_int_unsigned(va_list list);
 int f_perc(va_list list);
