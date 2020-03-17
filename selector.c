@@ -14,7 +14,6 @@ int select_(const char *format, va_list list, op_ options[])
 		return (-1);
 	while (format[i])
 	{
-
 		for (; format[i] != '%' && format[i]; i++)
 			_putchar(format[i]), nchar++;
 		if (!format[i])

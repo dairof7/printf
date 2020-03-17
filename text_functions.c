@@ -16,7 +16,17 @@ int f_char(va_list list)
  */
 int f_string(va_list list)
 {
-	return (_puts(va_arg(list, char *)));
+	int lens;
+	char *s = va_arg(list, char *);
+
+	lens = 0;
+	if (s == NULL)
+		lens = lens + _puts("(null)");
+	while (s[lens])
+		lens = lens + _putchar(s[lens]);
+
+	return (lens);
+	/*return (_puts(va_arg(list, char *)));*/
 }
 /**
  * f_perc - print percent symbol.
