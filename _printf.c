@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		{"d", f_int},
 		{"u", f_int_unsigned},
 		{"o", f_oct},
+		{"x", f_hex},
 		{NULL, NULL}
 		};
 
