@@ -12,6 +12,8 @@ int f_bin(va_list list)
 
 	n = va_arg(list, int);
 	len = len_num(n, 2);
+	if (len == 0)
+		return(-1);
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
 		return (-1);
