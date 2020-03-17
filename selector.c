@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * select_ -  select the type of function.
  * @format: first argumento of printf, s a character string
@@ -15,18 +14,15 @@ int select_(const char *format, va_list list, op_ options[])
 		return (-1);
 	while (format[i])
 	{
+
 		for (; format[i] != '%' && format[i]; i++)
-		{
-			_putchar(format[i]);
-			nchar++;
-		}
+			_putchar(format[i]), nchar++;
 		if (!format[i])
 			return (nchar);
-		for (j = 0; options[i].op != NULL; j++)
+		for (j = 0; options[j].op != NULL; j++)
 		{
 			if (format[i + 1] == ' ')
 			{
-				_putchar(' ');
 				nchar++;
 				i++;
 			}
@@ -41,6 +37,8 @@ int select_(const char *format, va_list list, op_ options[])
 				break;
 			}
 		}
+		if (format[i] == '%')
+			continue;
 		if (!format[i])
 			break;
 		_putchar(format[i]);
