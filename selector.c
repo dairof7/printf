@@ -37,8 +37,8 @@ int select_(const char *format, va_list list, op_ options[])
 				nchar += options[j].f(list);
 				if (nchar == -1)
 					return (-1);
-					i += 2;
-					break;
+				i += 2;
+				break;
 			}
 		}
 		if (!format[i])
