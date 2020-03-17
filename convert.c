@@ -43,13 +43,11 @@ int f_bin(va_list list)
  */
 int f_oct(va_list list)
 {
-	int n, bit = 0, i = 0;
-	int len = 0;
+	unsigned int n, bit = 0, i = 0;
+	unsigned int len = 0;
 	char *str;
 
 	n = va_arg(list, int);
-	if (n < 0)
-		return (-1);
 	len = len_num(n, 8);
 	str = malloc(sizeof(char) * len + 1);
 	if (str == NULL)
@@ -82,13 +80,12 @@ int f_oct(va_list list)
  */
 int f_hex(va_list list)
 {
-	int n, mod = 0, copia, len, i = 0;
+	unsigned int n, mod = 0, copia;
+	unsigned int len, i = 0;
 	char *str;
 
 	n = va_arg(list, int);
 	copia = n;
-	if (n < 0)
-		return (-1);
 	if (n == 0)
 	{
 		_putchar('0');
@@ -115,8 +112,9 @@ int f_hex(va_list list)
 				i++;
 			}
 		}
+		rev_string(str);
 	}
-	for (i = len - 1 ; i >= 0; i--)
+	for (i = 0 ; i < len; i++)
 		_putchar(str[i]);
 	free(str);
 	return (len);
@@ -128,13 +126,12 @@ int f_hex(va_list list)
  */
 int f_heX(va_list list)
 {
-	int n, mod = 0, copia, len, i = 0;
+	unsigned int n, mod = 0, copia;
+	unsigned int len, i = 0;
 	char *str;
 
 	n = va_arg(list, int);
 	copia = n;
-	if (n < 0)
-		return (-1);
 	if (n == 0)
 	{
 		_putchar('0');
@@ -161,8 +158,9 @@ int f_heX(va_list list)
 				i++;
 			}
 		}
+		rev_string(str);
 	}
-	for (i = len - 1 ; i >= 0; i--)
+	for (i = 0; i < len; i++)
 		_putchar(str[i]);
 	free(str);
 	return (len);
