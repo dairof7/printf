@@ -6,15 +6,13 @@
  */
 int f_bin(va_list list)
 {
-	int n, bit = 0, i = 0;
-	int len = 0;
+	unsigned int i = 0;
+	unsigned int n, bit = 0, len = 0;
 	char *str;
 
 	n = va_arg(list, int);
-	if (n < 0)
-		return (-1);
 	len = len_num(n, 2);
-	str = malloc(sizeof(char) * len + 1);
+	str = malloc(sizeof(char) * len);
 	if (str == NULL)
 		return (-1);
 	if (n == 0)
