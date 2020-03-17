@@ -11,40 +11,41 @@ int select_(const char *format, va_list list, op_ options[])
 {
 	int i = 0, j = 0, nchar = 0;
 
-	for (i = 0; format[i] != '\0'; i++)
+	if (format == NULL)
+		return (-1);
+	while (format[i])
 	{
-		if (format[i] == '%' && format[i + 1] == '\0')
-			return (-1);
-		
-		if (format[i] == '%' && (format[i + 1] == ' ' || format[i + 1] != '%'))
+		for (; format[i] != '%' && format[i]; i++)
 		{
-			if (format[i + 1] == ' ' && format[i + 2] != ' ')
+			_putchar(format[i]);
+			nchar++;
+		}
+		if (!format[i])
+			return (nchar);
+		for (j = 0; options[i].op != NULL; j++)
+		{
+			if (format[i + 1] == ' ')
 			{
 				_putchar(' ');
 				nchar++;
 				i++;
 			}
-			j = 0;
-			while (options[j].op)
+			if (format[i + 1] == ' ')
+				return (-1);
+			if (format[i + 1] == options[j].op[0])
 			{
-				if (format[i + 1] == options[j].op[0])
-				{
-					nchar += options[j].f(list);
-					if (nchar == -1)
-						return (-1);
-					i++;
-					break;
-				}
-				if ((format[i + 1] == ' ') && (j == 7))
+				nchar += options[j].f(list);
+				if (nchar == -1)
 					return (-1);
-				j++;
+					i += 2;
+					break;
 			}
 		}
-		else
-		{
-			_putchar(format[i]);
-			nchar++;
-		}
+		if (!format[i])
+			break;
+		_putchar(format[i]);
+		nchar++;
+		i++;
 	}
 	return (nchar);
 }
