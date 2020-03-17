@@ -167,3 +167,25 @@ int f_heX(va_list list)
 	free(str);
 	return (len);
 }
+
+
+int *rot13(char *t)
+{
+	int i, j;
+	char p[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+	char n[] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+
+		for (i = 0; t[i] != '\0'; i++)
+		{
+			for (j = 0; j < 52; j++)
+			{
+				if (t[i] == p[j])
+				{
+					t[i] = n[j];
+					break;
+				}
+			}
+		}
+
+		return (t);
+}
