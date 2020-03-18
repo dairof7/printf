@@ -81,6 +81,7 @@ directives to format numeric and string arguments in a way that is mostly simila
  _printf("Actual     : %s$\n", "");
  printf("Expected   : %sschool\n", "holberton");
  _printf("Actual     : %sschool\n", "holberton");
+
  rot13 (%R)
 
  a = _printf("%R\n", "Holberton school");
@@ -90,6 +91,7 @@ directives to format numeric and string arguments in a way that is mostly simila
 
  Ubyoregbafpubby
  16
+
  Decimal to binary (%b)
 
  _printf("Dec: %i -> Bin:%b\n", 9875, 9875);
@@ -97,6 +99,7 @@ directives to format numeric and string arguments in a way that is mostly simila
  Outputs
 
  Dec: 9875 -> Bin:10011010010011
+
  Decimal to Hexadecimal (%x) and uppercase (%X)
 
  _printf("Dec: %i -> Hex:%x\n", 456375, 456375);
@@ -106,6 +109,7 @@ directives to format numeric and string arguments in a way that is mostly simila
 
  Dec: 456375 -> Hex:6f6b7
  Dec: 456375 -> Hex:6F6B7
+
  Decimal to Octal (%o)
 
  _printf("Dec: %i -> Oct:%o\n", 456375, 456375);
@@ -113,6 +117,7 @@ directives to format numeric and string arguments in a way that is mostly simila
  Outputs
 
  Dec: 456375 -> Oct:1573267
+
  Integers (%d)(%i)
 
  _printf("Int: %i \n", 456375);
@@ -124,6 +129,7 @@ directives to format numeric and string arguments in a way that is mostly simila
  Int: 456375 
  MaxInt: 2147483647 
  MinInt: -2147483648 
+
  Unsigned Integer (%u)
 
  _printf("Unsigned Int: %u \n", 456375);
