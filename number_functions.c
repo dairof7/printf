@@ -1,7 +1,7 @@
 /**
  * f_int - function to handle integers
  * @list: list type
- * Return: int
+ * Return: # of printed digits
  */
 #include "holberton.h"
 #include <stdlib.h>
@@ -51,7 +51,7 @@ int f_int(va_list list)
 /**
  * f_int_unsigned - function to handle unsigned integers
  * @list: list type
- * Return: int
+ * Return: # of printed unsigned integers
  */
 #include "holberton.h"
 #include <stdlib.h>
