@@ -37,7 +37,11 @@ int f_perc(__attribute__((unused))va_list list)
 	_putchar('%');
 	return (1);
 }
-
+/**
+ * f_rev - print a string in reverse
+ * @list: va_list of arguments
+ * Return: return the len of the printed string
+ */
 int f_rev(va_list list)
 {
 	int i = 0, len = 0;
