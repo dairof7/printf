@@ -2,7 +2,7 @@
 /**
  * f_bin - function to convert decimal to binary
  * @list: list type
- * Return: int
+ * Return: numbert of printed chars
  */
 int f_bin(va_list list)
 {
@@ -41,7 +41,7 @@ int f_bin(va_list list)
 /**
  * f_oct - function to convert decimal to octal
  * @list: list type
- * Return: int
+ * Return: number of printed chars
  */
 int f_oct(va_list list)
 {
@@ -78,7 +78,7 @@ int f_oct(va_list list)
 /**
  * f_hex - function to convert decimal to hexadecimal
  * @list: list type
- * Return: int
+ * Return: number of printed chars
  */
 int f_hex(va_list list)
 {
@@ -124,7 +124,7 @@ int f_hex(va_list list)
 /**
  * f_heX - function to convert decimal to hexadecimal, uppercase
  * @list: list type
- * Return: int
+ * Return: number of printed chars
  */
 int f_heX(va_list list)
 {
