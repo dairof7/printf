@@ -178,10 +178,6 @@ int f_rot13(va_list list)
 	int i, j;
 	char *t = va_arg(list, char *);
 
-	if (t == NULL)
-	{
-		t = "(avyy)";
-	}
 	char p[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
 	char n[] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
