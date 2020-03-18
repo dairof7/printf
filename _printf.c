@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * _printf -  select the type of function.
+ * _printf -  modded function of the printf,
+ * here are builded the struct with each specifiers.
  * @format: first argumento of printf, s a character string
- * Return: return the number of printer chars
+ * Return: return the number of printed chars
  */
 
 int _printf(const char *format, ...)
