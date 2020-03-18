@@ -40,5 +40,17 @@ int f_perc(__attribute__((unused))va_list list)
 
 int f_rev(va_list list)
 {
+	int i = 0, len = 0;
+	char *str = va_arg(list, char *);
 
+	while (str[i] != '\0')
+		i++;
+	len = i;
+	i--;
+	while (i >= 0)
+	{
+		_putchar(str[i]);
+		i--;
+	}
+	return (len);
 }
