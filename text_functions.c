@@ -2,7 +2,7 @@
 /**
  * f_char - print a simple char.
  * @list: va_list of arguments
- * Return: rerturn number of char
+ * Return: rerturn number of printed chars
  */
 int f_char(va_list list)
 {
@@ -12,7 +12,7 @@ int f_char(va_list list)
 /**
  * f_string - print a sstring.
  * @list: va_list of arguments
- * Return: rerturn number of char
+ * Return: rerturn number of printed chars
  */
 int f_string(va_list list)
 {
