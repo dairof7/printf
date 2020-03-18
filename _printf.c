@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"x", f_hex},
 		{"X", f_heX},
 		{"R", f_rot13},
+		{"r", f_rev},
 		{NULL, NULL}
 		};
 

@@ -37,3 +37,8 @@ int f_perc(__attribute__((unused))va_list list)
 	_putchar('%');
 	return (1);
 }
+
+int f_rev(va_list list)
+{
+
+}
