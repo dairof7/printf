@@ -26,7 +26,6 @@ int f_string(va_list list)
 		lens = lens + _putchar(s[lens]);
 
 	return (lens);
-	/*return (_puts(va_arg(list, char *)));*/
 }
 /**
  * f_perc - print percent symbol.

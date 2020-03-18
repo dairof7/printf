@@ -167,3 +167,30 @@ int f_heX(va_list list)
 	free(str);
 	return (len);
 }
+/**
+ * f_rot13 - function to convert decimal to hexadecimal, uppercase
+ * @list: list type
+ * Return: rot13 convert
+ */
+int f_rot13(va_list list)
+{
+	int len = 0;
+	int i, j;
+	char *s = va_arg(list, char *);
+
+	char alpha[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char replace[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; j <= 52; j++)
+		{
+			if (s[i] == alpha[j])
+			{
+				len = len + _putchar(replace[j]);
+				break;
+			}
+		}
+	}
+	return (len);
+}

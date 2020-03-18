@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"o", f_oct},
 		{"x", f_hex},
 		{"X", f_heX},
+		{"R", f_rot13},
 		{NULL, NULL}
 		};
 
