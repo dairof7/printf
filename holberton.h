@@ -33,4 +33,5 @@ int f_int(va_list list);
 int f_int_unsigned(va_list list);
 int f_perc(va_list list);
 int f_rot13(va_list list);
+int f_rev(va_list list);
 #endif
