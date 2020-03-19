@@ -23,7 +23,7 @@ int f_string(va_list list)
 	if (s == NULL)
 	{
 		lens = lens + _puts("(null)");
-		return (lens);
+		return (lens + 1);
 	}
 	while (s[lens])
 		lens = lens + _putchar(s[lens]);
