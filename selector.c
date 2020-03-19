@@ -22,6 +22,7 @@ int select_(const char *format, va_list list, op_ options[])
 		{
 			if (format[i + 1] == ' ')
 			{
+				_putchar(format[i + 1]);
 				nchar++;
 				i++;
 			}
@@ -30,19 +31,16 @@ int select_(const char *format, va_list list, op_ options[])
 			if (format[i + 1] == options[j].op[0])
 			{
 				nchar += options[j].f(list);
-				if (nchar == -1)
-					return (-1);
 				i += 2;
 				break;
 			}
 		}
-		if (format[i] == '%')
-			continue;
-		if (!format[i])
-			break;
-		_putchar(format[i]);
-		nchar++;
-		i++;
+		if (options[j].op == NULL)
+		{
+			_putchar(format[i]);
+			i++;
+			nchar++;
+		}
 	}
 	return (nchar);
 }

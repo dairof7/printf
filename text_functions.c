@@ -21,7 +21,10 @@ int f_string(va_list list)
 
 	lens = 0;
 	if (s == NULL)
+	{
 		lens = lens + _puts("(null)");
+		return (lens);
+	}
 	while (s[lens])
 		lens = lens + _putchar(s[lens]);
 
