@@ -97,7 +97,7 @@ int f_hex(va_list list)
 		len = len_num(copia, 16);
 		str = malloc(sizeof(char) * len);
 		if (str == NULL)
-			return (-1);
+			return (1);
 		while (n > 0)
 		{
 			mod = n % 16;
@@ -144,7 +144,7 @@ int f_heX(va_list list)
 		len = len_num(copia, 16);
 		str = malloc(sizeof(char) * len);
 		if (str == NULL)
-			return (-1);
+			return (1);
 		while (n > 0)
 		{
 			mod = n % 16;
