@@ -90,6 +90,7 @@ int f_hex(va_list list)
 	{
 		_putchar('0');
 		len = 1;
+		return (len);
 	}
 	else
 	{
