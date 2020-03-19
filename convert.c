@@ -10,29 +10,27 @@ int f_bin(va_list list)
 	unsigned int n, bit = 0, len = 0;
 	char *str;
 
-	n = va_arg(list, int);
+	n = va_arg(list, unsigned int);
+	if (n == 0)
+	{
+		_putchar('0');
+		len = 1;
+		return (len);
+	}
 	len = len_num(n, 2);
 	if (len == 0)
 		return (-1);
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
 		return (-1);
-	if (n == 0)
+	while (n > 0)
 	{
-		_putchar('0');
-		len = 1;
+		bit = n % 2;
+		n =  n / 2;
+		str[i] = bit + '0';
+		i++;
 	}
-	else
-	{
-		while (n > 0)
-		{
-			bit = n % 2;
-			n =  n / 2;
-			str[i] = bit + '0';
-			i++;
-		}
-		rev_string(str);
-	}
+	rev_string(str);
 	for (i = 0 ; i < len; i++)
 		_putchar(str[i]);
 	free(str);
@@ -178,12 +176,12 @@ int f_rot13(va_list list)
 	int i, j;
 	char *t = va_arg(list, char *);
 
-	char p[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
-	char n[] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+	char p[] = {"\n!_ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+	char n[] = {"\n!_ NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
 	for (i = 0; t[i] != '\0'; i++)
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; j < 56; j++)
 		{
 			if (t[i] == p[j])
 			{
