@@ -18,6 +18,8 @@ int select_(const char *format, va_list list, op_ options[])
 			_putchar(format[i]), nchar++;
 		if (!format[i])
 			return (nchar);
+		if (format[i] == '%' && !format[i + 1])
+			return (-1);
 		for (j = 0; options[j].op != NULL; j++)
 		{
 			if (format[i + 1] == ' ')
